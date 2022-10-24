@@ -13,7 +13,7 @@ public class Client {
         Channel channel = ManagedChannelBuilder.forAddress("localhost", 12345).usePlaintext().build();
         HelloWorldGrpc.HelloWorldBlockingStub helloWorldService = HelloWorldGrpc.newBlockingStub(channel);
 
-        System.out.println("Enter your name: ");
+        System.out.println("What is your name: ");
         String name = new Scanner(System.in).nextLine();
         HelloWorldProto.GreetResponse response = helloWorldService.greet(HelloWorldProto.GreetRequest.newBuilder().setName(name).build());
 
