@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package demo.proto;
+option java_outer_classname = "HelloWorldProto";
+
+service HelloWorld {
+  rpc Greet(GreetRequest) returns (GreetResponse) {}
+}
+
+message GreetRequest {
+  string name  = 1;
+}
+
+message GreetResponse {
+  string response = 1;
+}
